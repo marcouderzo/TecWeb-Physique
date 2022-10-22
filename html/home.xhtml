@@ -1,0 +1,108 @@
+<includeBasePlaceholder />
+
+<blockDefHeaderPlaceholder />
+<img
+  src="images/logo.png"
+  alt="Physique Logo che rappresenta una mano che alza un manubrio"
+  id="logo"
+/>
+<h1 xml:lang="en">Home</h1>
+
+<ifNotloggedPlaceholder />
+<p>
+  <a xml:lang="en" lang="en" href="/mtesser/?r=login">Login</a>
+  
+  <a xml:lang="en" lang="en" href="/mtesser/?r=signup">Signup</a>
+</p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+<p><a xml:lang="en" lang="en" href="/mtesser/?r=logout">Logout</a></p>
+<endIfPlaceholder />
+
+<blockEndPlaceholder />
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>
+  Ti trovi in <span xml:lang="en" lang="en">Home</span
+  ><img
+    id="menuhamburger"
+    src="images/hamburger.png"
+    class="nascosto"
+    alt="apro menù"
+    onclick="openmenu()"
+  />
+  <img
+    id="chiudimenu"
+    src="images/close.png"
+    class="nascosto"
+    alt="x per chiudere menù"
+
+    onclick="closemenu()"
+  />
+</p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class="aiuti" href="#contenthome">Vai al contenuto</a>
+
+<blockEndPlaceholder />
+<blockDefMenuPlaceholder />
+
+<ul>
+  <li xml:lang="en" lang="en" id="currentLink">Home</li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=workout">Workout</a></li>
+  <li><a href="/mtesser/?r=alimentation">Alimentazione</a></li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=forum">Forum</a></li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=news">News</a></li>
+  <ifLoggedPlaceholder />
+  <li><a href="/mtesser/?r=profile">Profilo</a></li>
+  <endIfPlaceholder />
+  <ifAdminPlaceholder />
+  <li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+  <endIfPlaceholder />
+</ul>
+
+<blockEndPlaceholder />
+
+<blockDefContentPlaceholder />
+
+<div id="chisiamo">
+  <h1 xml:lang="en" lang="en">Physique</h1>
+  <p>
+    Vuoi raggiungere il tuo fisico ideale ma non sai da dove iniziare? Sei nel
+    posto giusto!
+  </p>
+  <p>
+    Il nostro obiettivo è fornire una piattaforma in grado di dare tutte le
+    informazioni necessarie ad avvicinarsi al mondo del
+    <span xml:lang="en" lang="en">fitness</span>.
+  </p>
+  <h2>Cosa puoi trovare da noi</h2>
+  <p>
+    Il <span xml:lang="en" lang="en">team</span> di
+    <span xml:lang="en" lang="en">Physique</span> mette a disposizione
+    suggerimenti per gli allenamenti, con speigazioni dettagliate, ricette
+    gustose di ogni tipo, dolci, primi, secondi. Inoltre non ti perderai mai
+    nessuna notizia sul mondo del <span xml:lang="en" lang="en">fitness</span>!
+  </p>
+  <h2>E non finisce qui...</h2>
+  <p>
+    Entra nella nostra <span xml:lang="en" lang="en">community</span> e
+    condividi con gli altri utenti e con il
+    <span xml:lang="en" lang="en">team</span> di
+    <span xml:lang="en" lang="en">Physique</span> i tuoi progessi, fai domande,
+    aiuta gli altri utenti e tanto altro ancora!
+  </p>
+  <h2 id = "h2home">Chi siamo</h2>
+
+  <p id = "scrittahome">
+    Ecco il nostro %%team%% 
+  </p>
+
+  <img src="images/chisiamo.jpg" alt="" id="fotochisiamo" />
+</div>
+<blockEndPlaceholder />

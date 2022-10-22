@@ -1,0 +1,62 @@
+<includeBasePlaceholder />
+
+
+<blockDefHeaderPlaceholder />
+    <img src="images/logo.png" alt="Physique Logo che rappresenta una mano che alza un manubrio" id="logo"/>
+    <h1>Alimentazione</h1>
+
+<ifNotloggedPlaceholder />
+    <p>
+        <a xml:lang="en" lang = "en" href="/mtesser/?r=login&amp;prev=<redirectPlaceholder />">Login</a>
+        <a xml:lang="en" lang = "en" href="/mtesser/?r=signup&amp;prev=<redirectPlaceholder />">Signup</a>
+    </p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+    <p><a xml:lang="en" lang = "en" href="/mtesser/?r=logout&amp;prev=<redirectPlaceholder />">Logout</a></p>
+<endIfPlaceholder />
+
+<blockEndPlaceholder />
+
+
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a><img id = "menuhamburger" src="images/hamburger.png" class="nascosto" alt="apro menù" onclick="openmenu()"/>
+    <img id = "chiudimenu" src= "images/close.png" alt="x per chiudere menù" class="nascosto" onclick="closemenu()"/>  » Alimentazione </p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+
+<blockDefMenuPlaceholder />
+
+<ul>
+
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=workout">Workout</a></li>
+<li id="currentLink">Alimentazione</li>
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=news">News</a></li>
+<ifLoggedPlaceholder />
+<li><a href = "/mtesser/?r=profile">Profilo</a></li>
+<endIfPlaceholder />
+<ifAdminPlaceholder />
+<li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+<endIfPlaceholder />
+</ul>
+
+<blockEndPlaceholder />
+
+
+<blockDefContentPlaceholder />
+
+<dl id = "alimentationcontent">
+<recipesPlaceholder />
+</dl>
+<blockEndPlaceholder />

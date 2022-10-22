@@ -1,0 +1,76 @@
+<includeBasePlaceholder />
+
+
+<blockDefHeaderPlaceholder />
+<img src="images/logo.png" alt="Physique Logo che rappresenta una mano che alza un manubrio" id="logo"/>
+<h1 xml:lang="en" lang = "en">News</h1>
+
+<ifNotloggedPlaceholder />
+<p>
+    <a xml:lang="en" lang = "en" href="/mtesser/?r=login&amp;prev=<redirectPlaceholder />">Login</a>
+    
+    <a xml:lang="en" lang = "en" href="/mtesser/?r=signup&amp;prev=<redirectPlaceholder />">Signup</a>
+</p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+<p><a xml:lang="en" lang = "en" href="/mtesser/?r=logout&amp;prev=<redirectPlaceholder />">Logout</a></p>
+<endIfPlaceholder />
+
+
+<blockEndPlaceholder />
+
+
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a><img id = "menuhamburger" src="images/hamburger.png" alt="apri menù" class="nascosto" onclick="openmenu()"/>
+    <img id = "chiudimenu" src= "images/close.png" class="nascosto" alt="x per chiudere menù" onclick= "closemenu()"/>  » %%News%%</p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+
+<blockDefMenuPlaceholder />
+
+<ul>
+
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=workout">Workout</a></li>
+    <li><a href = "/mtesser/?r=alimentation">Alimentazione</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+    <li xml:lang="en" lang = "en" id="currentLink">News</li>
+    <ifLoggedPlaceholder />
+    <li><a href = "/mtesser/?r=profile">Profilo</a></li>
+    <endIfPlaceholder />
+    <ifAdminPlaceholder />
+    <li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+    <endIfPlaceholder />
+    
+</ul>
+
+<blockEndPlaceholder />
+
+
+<blockDefContentPlaceholder />
+
+<ul id = "navnews">
+
+<navnewsPlaceholder />
+
+</ul>
+
+
+
+<ul id = "NewsList">
+
+<newsPlaceholder />
+
+</ul>
+
+<blockEndPlaceholder />

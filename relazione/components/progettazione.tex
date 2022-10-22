@@ -1,0 +1,103 @@
+\section{Fase di progettazione}
+\subsection{Progettazione}
+In una prima fase, il gruppo si è riunito per decidere il tema del sito web da sviluppare. Sono state raccolte le varie idee, decise le funzionalità e gli obiettivi da raggiungere, quali tipologie di argomenti trattare in ciascuna pagina, impostato il layout del sito e decisi i colori da utilizzare. Inoltre sono state decise le tecnologie da usare e si è decisa una prima suddivisione dei compiti individuali. \\
+Successivamente è stato progettato il database, nel quale vengono immagazzinate e organizzate le informazioni relative agli utenti e ai contenuti pubblicati sul sito web. Allo stesso tempo, è stato portato avanti lo sviluppo della parte front end del sito, prestando particolare attenzione anche all'accessibilità e alla visualizzazione del sito su dispositivi di diverse dimensioni. \\
+Infine, il sito è stato approfonditamente testato al fine di rilevare e risolvere eventuali bug e di validare la compatibilità con i differenti browser e dispositivi.
+\subsection{Struttura}
+\subsubsection{Header}
+L'header contiene il logo, il titolo della pagina su cui ci si trova e due link, uno per il login e l'altro per il signup. Questi ultimi due link sono visibili solo nel caso in cui l'utente non abbia ancora effettuato l'accesso. Dopo che l'utente ha eseguito l'accesso, al posto dei due link login e signup, sarà presente un solo link, ovvero quello per il logout, il quale, una volta cliccato, scollegherà l'utente. 
+\subsubsection{Breadcrumb}
+Lo scopo del breadcrumb è quello di indicare all'utente dove si trova all'interno del sito e il percorso per arrivare in tale pagina, in modo che gli sia più facile orientarsi durante la navigazione all'interno del sito e che possa facilmente tornare indietro. L'ultimo campo corrisponde alla pagina corrente e, per evitare link circolari, questo non è cliccabile.
+\subsubsection{Container}
+La classe container comprende il menù e il contenuto del sito.
+\paragraph{Menù}
+Il menù è posizionato sulla sinstra e contiene tutte le pagine raggiungibili tramite il sito:
+\begin{itemize}
+	\item \textit{Home};
+	\item \textit{Workout};
+	\item \textit{Alimentazione};
+	\item \textit{Forum};
+	\item \textit{News}.
+\end{itemize}
+Nel caso in cui l'utente abbia effettuato l'accesso, nel menù sarà presente anche il link alla pagina \textit{Profilo}. Se l'utente è un amministratore verrà visualizzato anche il link per il \textit{Pannello admin}.
+\paragraph{Content}
+Lo scopo di content è quello di esporre i contenuti proposti dal sito.
+\subparagraph{Home}
+La pagina home è quella principale, ovvero la prima che si vede quando si visita il sito. Al suo interno sono presenti una descrizione del sito, le funzionalità che possono essere trovate all'interno del sito ed infine la foto del team.
+\subparagraph{Workout}
+La pagina workout espone i concetti basilari ed imprescindibili della programmazione dell'allenamento. É perciò rivolta al principiante che ha intenzione di entrare in palestra per la prima volta, o che si è finora allenato in modo non ottimale.
+La pagina è suddivisa in paragrafi che danno un'introduzione al motivo per cui è da preferire una programmazione di allenamento studiata.
+In fondo alla pagina si possono trovare dei link che rimandano alle principali tipologie di suddivisione dell'allenamento.
+\subparagraph{Split}
+Le pagine split sono 4:
+\begin{itemize}
+\item Bro Split;
+\item Push-Pull-Legs;
+\item Upper-Lower;
+\item Full-Body;
+\end{itemize}           
+Tutte e 4 hanno una struttura simile tra di loro.
+Sono suddivise in paragrafi in cui viene spiegato in cosa consiste lo split, per poi elencare i suoi vantaggi e svantaggi ed infine mostrarne un esempio in forma tabellare.
+In tutte le pagine è presente un link \textit{Indietro} che riporta alla pagina workout principale. 
+\subparagraph{Alimentazione}
+La pagina di alimentazione contiene un elenco di ricette, che sono presentate in riquadri contenenti il nome della ricetta, l’immagine
+del piatto, una breve descrizione del piatto ed infine il link che apre la pagina completa della ricetta. 
+\subparagraph{Ricetta}
+La pagina della ricetta completa riporta il titolo della stessa seguito da una foto del risultato finale del piatto. Successivamente vengono elencati gli ingredienti necessari alla preparazione, viene illustrato il procedimento da seguire ed, eventualmente, vengono dati dei consigli per agevolare la riuscita della ricetta. In tutte le pagine è presente un link \textit{Indietro} che riporta alla pagina alimentazione principale.
+\subparagraph{Forum}
+La pagina del forum, nel caso in cui l'utente non abbia effettuato l'accesso, chiederà all'utente di accedere o registrarsi per lasciare commenti. Nel caso in cui questo non avvenga l'utente avrà solo la possibilità di leggere i post ed i commenti lasciati dagli altri utenti e non potrà interagire con il forum in alcun modo.
+Al contrario, nel caso in cui l'utente abbia effettuato l'accesso, per primo verrà visualizzato un form per lasciare un commento e sotto, come nel caso precedente, l'elenco di tutti i post con ora anche la possibilità di lasciare eventualmente un like e di rispondere a questi.
+\subparagraph{News}
+La pagina delle news riporta, al primo accesso, una lista con tutte le notizie del sito di ogni categoria. Queste, successivamente potranno essere filtrate, e quindi ci sarà la possibilità di visualizzare solo le news relative a: workout, alimentazione o notizie del sito.
+\subparagraph{Profilo}
+La pagina del profilo permette all'utente di visualizzare e modificare alcune informazioni relative al suo account come: nome, cognome, email e password.
+\subparagraph{Pannello admin}
+La pagina del pannello admin permette all'amministratore di effettuare delle modifiche, rimozioni od inserimenti all'interno del sito, tra cui: 
+\begin{itemize}
+	\item promuovere un utente da standard ad amministratore;
+	\item eliminare ricette, news, post ed eventualmente relative risposte;
+	\item aggiungere news e ricette;
+	\item bannare un utente dal forum, rimuovere il ban;
+	\item rimuovere anche degli account;
+\end{itemize}     
+\subparagraph{Signup e login}
+Le pagine di signup e login permettono all'utente rispettivamente di  registrarsi o accedere con le proprie credenziali al sito. Nella pagina signup sono presenti dei campi per inserire username, indirizzo email, nome, cognome e la password (quest’ultima da inserire due volte per confermare la correttezza). Per il login invece è necessario solamente inserire l'username e la password.
+\subsection{Visualizzazione}
+Il sito è stato pensato in modo da avere una visualizzazione adatta ad ogni tipologia di dispositivo ed in modo da avere pagine accessibili ad una categoria di utenti più ampia possibile.
+Sono state quindi realizzate tre tipologie di visualizzazione del sito: desktop, mobile e stampa.
+\paragraph{Desktop}
+Nella visualizzazione desktop il layout è diviso in 4 sezioni.
+La prima sezione, ossia l'header,contiene al suo interno: il logo del sito,il nome della pagina in cui ci si trova ed infine le opzioni di autenticazione(login e signup se non si è effettuato l'accesso e logout nel caso contrario).
+La seconda sezione, ossia il breadcrumb,contiene il percorso effettuato per arrivare alla pagina corrente.
+La terza sezione, ossia il menu,elenca le pagine principali del sito.
+La quarta sezione, ossia il content, racchiude il contenuto che si adatta in base alla grandezza della schermata.
+\paragraph{Mobile}
+Nella visualizzazione mobile è stato implementato il menù ad hamburger al fine di gestire al meglio lo spazio disponibile. Questo compare all'interno del breadcrumb, a destra, e per espanderlo è necessario cliccare sull'icona. Una volta espanso, il menù si sviluppa in verticale. Per chiuderlo, bisogna cliccare sul simbolo di "\textit{X}" che si trova al posto dell'icona del menù. \\
+Il resto delle pagine ha il medesimo layout della versione desktop, fanno eccezione le tabelle presenti nelle singole pagine \textit{Split}. Infatti, per realizzare le tabelle nella visualizzazione mobile è stato seguito l'approccio \textit{Responsive table}. 
+%mettere foto tabella e menù con media query
+\paragraph{Stampa}
+Per quanto riguarda la stampa, sono stati tenuti solo gli elementi fondamentali, ovvero il contenuto della pagina, tralasciando, quindi, gli elementi di presentazione (immagini e
+background). È stato rimosso il menù, il logo del sito, perché non necessari, mentre è stato mantenuto il breadcrumb, per specificare il percorso alla pagina corrente. Le pagine sono in bianco e nero per
+enfatizzare il contenuto anziché la presentazione, è stato rimosso il bordo nei titoli dei paragrafi e per i link che portano al di fuori del sito ne è stata aggiunta la versione completa. Infine, il font, che nella visualizzazione a schermo era sans-serif,  è diventato serif per una migliore leggibilità su carta stampata.
+
+\subsection{Accessibilità}
+Si sono seguite le linee guida del WCAG in modo da sviluppare un sito web che abbia un alto livello di accessibilità. Fondamentale è stata la suddivisione fra contenuto, presentazione e comportamento, che garantisce un buon posizionamento nei motori di ricerca e una buona interazione con gli utenti che presentano disabilità visive.
+
+\subsubsection{Contenuto}
+Il breadcrumb, presente in ciascuna pagina, permette all'utente di sapere in ogni momento dove si trova all'interno del sito e il percorso che ha fatto per raggiungere tale pagina. Per evitare link circolari, l'ultimo campo del breadcrumb (che corrisponde alla pagina corrente) e la voce del menù della pagina corrente, non sono cliccabili. L'utente può conoscere quale altre pagine può raggiungere da quella in cui si trova perchè i link che si trovano all'interno di questa sono sottolineati. 
+Per aiutare gli utenti che utilizzano lo screen reader, è presente un link nascosto che gli permette di andare direttamente al contenuto della pagina corrente, saltando il menù. Inoltre per ogni immagine, incapsulate nel tag \textit{img}, è presente il tag \textit{alt}  che fornisce una  descrizione alternativa per gli screen reader. 
+All'interno del sito si trovano parole in lingua straniera le quali sono accompagnate dal tag span che ne specifica tramite \textit{xml:lang="..."} la lingua della parola in questione. 
+
+
+\subsubsection{Presentazione}
+Il design del sito è stato implementato, tramite CSS, usando classi che definiscono il contenuto
+dell’oggetto e non il comportamento, in modo da mantenere la separazione tra comportamento e presentazione. É presente un foglio di stile unico in cui si trova il codice dedicato alla visualizzazione desktop, stampa e mobile. Questi ultimi due sono stati effettuati tramite \textit{media query}. Vengono usate principalmente misure relative (em) o in percentuale per permettere una corretta visualizzazione delle pagine su schermi di dimensioni diverse. 
+Il colore principale del sito è l'azzurro, che contrasta le scritte, per esempio dei titoli, i quali sono in bianco. Per distinguere i link già visitati, si è deciso di evidenziare quest'ultimi con il colore viola, mentre i link non ancora visitati richiamano il colore che domina il sito, cioè l'azzurro. 
+
+
+\subsubsection{Comportamento}
+Le informazioni all'interno del sito sono reperibili con un numero
+limitato di click, infatti la maggior parte delle informazioni sono raggiungibili tramite il menù. 
+Per facilitare la navigazione, le pagine che possono portare ad altre pagine, come workout e alimentazione, presentano, all'inizio della pagina, il link \textit{Indietro} che riporta l'utente alla pagina principale della relativa sezione. 
+I dati inseriti in input dall'utente sono stati validati per garantirne il corretto inserimento. Nel caso un input non superi la validazione, viene mostrato un messaggio d'errore, contenente la spiegazione dell’errore commesso.
+

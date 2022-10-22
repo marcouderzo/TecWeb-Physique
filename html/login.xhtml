@@ -1,0 +1,114 @@
+<includeBasePlaceholder />
+
+<blockDefHeaderPlaceholder />
+<img src="images/logo.png" alt="Physique Logo che rappresenta una mano che alza un manubrio" id="logo"/>
+<h1>Login</h1>
+
+<blockEndPlaceholder />
+
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a>  » %%Login%% 
+    <img
+    id="menuhamburger"
+    src="images/hamburger.png"
+    class="nascosto"
+    alt="apro menù"
+    onclick="openmenu()"
+  />
+  <img
+    id="chiudimenu"
+    src="images/close.png"
+    class="nascosto"
+    alt="x per chiudere menù"
+
+    onclick="closemenu()"
+  />
+</p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+<blockDefMenuPlaceholder />
+
+<ul>
+
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=workout">Workout</a></li>
+    <li><a href = "/mtesser/?r=alimentation">Alimentazione</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=news">News</a></li>
+    <ifLoggedPlaceholder />
+    <li><a href = "/mtesser/?r=profile">Profilo</a></li>
+    <endIfPlaceholder />
+    <ifAdminPlaceholder />
+    <li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+    <endIfPlaceholder />
+    
+</ul>
+
+<blockEndPlaceholder />
+
+
+<blockDefContentPlaceholder />
+
+    <div id="notLoggedIn">
+        <h2>Accedi al Sito</h2>
+        <form method="post" action = "api/login.php" onsubmit = "return verifylogin();">
+            <fieldset>
+
+
+                <ifSqlPlaceholder />
+
+                <p id="sqlError" class="rosso">Si ricorda che non sono permessi apostrofi o doppi apici nel %%login%%</p>
+
+                <endIfPlaceholder />
+
+                <p id = "erroreusername" class = "rosso nascosto">Questo %%username%% non è valido</p>
+
+                <ifErrorusernamenonvalidoPlaceholder />
+                
+                    <p class = "rosso" id="invalidUser">Lo %%username%% non è valido</p>
+
+                <endIfPlaceholder />
+                <ifErrorusernamenonesistentePlaceholder />
+                
+                    <p class = "rosso" id="unknownUser">Questo %%username%% non esiste</p>
+
+                <endIfPlaceholder />
+                <ifErrorsqlinjectiontryPlaceholder />
+                
+                    <p class = "rosso" id="sql">%%SQL injection try%%</p>
+
+                <endIfPlaceholder />
+
+                <label id="loginUsername" for="usernameInputArea">Inserisci il tuo %%Username%%</label>
+                <input id="usernameInputArea" type = "text" name="username" ></input>
+                <p id = "errorepassword" class = "nascosto rosso">La %%password%% non è valida</p>
+
+                
+                <ifErrorpasswordnonvalidoPlaceholder />
+                
+                    <p class = "rosso" id="invalidPass">La %%password%% non è valida</p>
+
+                <endIfPlaceholder />
+                <ifErrorpasswordnonesistentePlaceholder />
+                
+                    <p class = "rosso" id="wrongPass">Questa %%password%% non è corretta</p>
+
+                <endIfPlaceholder />
+                <label id="loginPassword" for="passwordInputArea">Inserisci la tua %%Password%%</label>
+                <input type = "password" id="passwordInputArea" name="password" ></input>
+                <input type="hidden" tabindex="-1" value="<redirectPlaceholder />" name="redirect" />
+                <input type="submit" class="loginButton" name="login" value="Accedi"/>
+            </fieldset>
+        </form>
+    </div>
+
+<blockEndPlaceholder />

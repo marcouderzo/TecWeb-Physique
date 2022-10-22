@@ -1,0 +1,21 @@
+language: php
+php:
+  - 5.5
+  - 5.4
+  - 5.3
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+
+install:
+  - composer install --prefer-source --no-interaction --dev
+
+script:
+  - mkdir -p build/logs
+  - phpunit -v --coverage-clover build/logs/clover.xml
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml

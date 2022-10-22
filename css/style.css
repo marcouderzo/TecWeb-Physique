@@ -1,0 +1,2132 @@
+/*INTERO DOCUMENTO*/
+/*
+INTRO
+*/
+
+* {
+  padding: 0em;
+  margin: 0em;
+}
+.nascosto {
+  display: none;
+}
+
+.rosso {
+  color: red;
+}
+
+html {
+  background-image: url("../images/sfondo.png");
+  background-repeat: repeat;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+body {
+  max-width: 1024px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  font-family: "Arial", "Helvetica", sans-serif;
+  min-height: 100vh;
+}
+
+.aiuti {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+
+#header a{
+  margin-right: 0.3em;
+}
+/*PULSANTI GENERALI*/
+
+button {
+  padding: 0.2em;
+  background-color: rgb(135, 206, 235);
+  border: 2px solid rgb(25, 25, 112);
+  border-radius: 6px;
+}
+
+input[type="button"] {
+  padding: 0.2em;
+  background-color: rgb(135, 206, 235);
+  border: 2px solid rgb(25, 25, 112);
+  border-radius: 6px;
+}
+
+input[type="button"]:hover {
+  opacity: 0.8;
+}
+
+.float {
+  float: right;
+}
+/*INPUT GENERALI*/
+
+input[type="password"] {
+  margin-bottom: 1em;
+  border: 1px solid rgb(25, 25, 112);
+  padding: 0.2em;
+}
+
+input {
+  margin-bottom: 1em;
+  border: 1px solid rgb(25, 25, 112);
+}
+
+select {
+  margin-bottom: 1em;
+  border: 1px solid rgb(25, 25, 112);
+  padding: 0.2em;
+}
+
+input[type="text"] {
+  margin-bottom: 1em;
+  border: 1px solid rgb(25, 25, 112);
+  padding: 0.2em;
+}
+
+input[type="email"] {
+  margin-bottom: 1em;
+  border: 1px solid rgb(25, 25, 112);
+  padding: 0.2em;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 17vh;
+}
+
+#header h1 {
+  color: rgb(0, 110, 204);
+  margin-left: 0.5em;
+}
+
+#header p {
+  text-align: right;
+  padding-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#header a {
+  border: 2px solid rgb(25, 25, 112);
+  background-color: rgb(135, 206, 235);
+  color: rgb(0, 0, 0);
+  padding: 0.2em;
+  border-radius: 6px;
+  text-decoration: underline;
+}
+
+#header a:hover {
+  opacity: 0.8;
+}
+
+#breadcrumb {
+  background-color: rgb(0, 110, 204);
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 0.3em;
+  padding-left: 0.8em;
+}
+
+#breadcrumb a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#heading {
+  max-height: 30vh;
+}
+
+#menu {
+  flex: 0 0 22%;
+  width: 22%;
+}
+
+.floatleft {
+  float: left;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding-top: 9.5em;
+  margin-bottom: 10.14em;
+}
+
+#menu ul li {
+  line-height: 3em;
+  padding-left: 1.5em;
+}
+
+#menu ul a {
+  color: rgb(0, 110, 204);
+  text-decoration: none;
+}
+
+#menu ul a:hover {
+  opacity: 0.8;
+}
+
+/*General Content div*/
+
+#container {
+  display: flex;
+  min-height: 70vh;
+}
+
+#content {
+  border-left: 2px solid rgb(0, 0, 0);
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  padding-top: 1em;
+  width: 70%;
+}
+
+#newscontent {
+  border-left: 2px solid rgb(0, 0, 0);
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  padding-top: 1em;
+  width: 100%;
+}
+
+#content a:visited,
+#newscontent a:visited {
+  color: rgb(120, 0, 120);
+}
+
+#content a,
+#newscontent a {
+  text-decoration: underline;
+  color: rgb(0, 0, 255);
+}
+
+#content button:hover,
+#newscontent button:hover {
+  opacity: 0.8;
+}
+
+#content h1,
+#newscontent h1 {
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-left: 0.25em;
+  background-color: rgb(0, 110, 204);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(25, 25, 112);
+  margin-bottom: 0.5em;
+}
+
+#content h2,
+#newscontent h2 {
+  background-color: rgb(0, 110, 204);
+  color: rgb(255, 255, 255);
+  padding: 0.3em;
+  padding-left: 0.5em;
+  border: 3px solid rgb(25, 25, 112);
+}
+
+#back {
+  margin-bottom: 1em;
+}
+
+/* Fine General Content div*/
+
+/* Inizio Home*/
+
+#contenthome {
+  margin-left: 0.5em;
+  width: 95%;
+  padding: 5em 2em 3em 2em;
+  border-left: 2px solid rgb(0, 0, 0);
+  text-align: center;
+}
+#contenthome p {
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+#scrittahome{
+  padding-right: 2em;
+}
+
+#contenthome h1 {
+  margin-bottom: 1em;
+  color: rgb(0, 110, 204);
+  font-size: 3em;
+}
+
+#contenthome h2 {
+  margin-top: 1em;
+}
+
+#fotochisiamo {
+  margin: auto;
+  margin-top: 2em;
+  width: 80%;
+}
+
+/* Fine Home*/
+
+/* Inizio Pagina generale delle ricette*/
+
+.recipeImage {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.recipeTitle {
+  background-color: rgb(0, 110, 204);
+  color: rgb(255, 255, 255);
+  padding: 0.3em;
+  padding-left: 0.5em;
+  border: 3px solid rgb(25, 25, 112);
+}
+
+.recipeTitle a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.recipeBody {
+  border-left: 3px solid rgb(25, 25, 112);
+  border-right: 3px solid rgb(25, 25, 112);
+  border-bottom: 3px solid rgb(25, 25, 112);
+  margin-bottom: 2em;
+}
+
+.linkRecipe {
+  margin-bottom: 0.5em;
+}
+
+.recipeAd {
+  border: 2px solid rgb(25, 25, 112);
+  border-top: none;
+  margin-bottom: 0.5em;
+}
+
+.recipeAdText {
+  padding: 0.3em;
+  padding-left: 0.5em;
+  border-top: 3px solid rgb(25, 25, 112);
+}
+
+.linkricetta {
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+}
+
+/* Singola ricetta*/
+
+#recipeContent {
+  margin-left: 17%;
+  width: 70%;
+  padding-left: 0.5em;
+  border-left: 2px solid rgb(0, 0, 0);
+}
+
+#recipeContent h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#recipeHeadTitle {
+  color: rgb(0, 0, 0);
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#back a {
+  color: rgb(0, 110, 204);
+}
+
+#recipeInnerImage {
+  max-height: 30em;
+  max-width: 90%;
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+#smaller {
+  font-size: 0.9em;
+}
+
+#ingredients,
+#method,
+#hint {
+  padding-bottom: 0.7em;
+}
+
+#ingredients h3,
+#method h3,
+#hint h3 {
+  margin-bottom: 0.5em;
+}
+
+.partialList[title]::before {
+  content: attr(title);
+  display: block;
+  margin-left: -0.9em;
+  padding-bottom: 0.3em;
+  padding-top: 0.15em;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+#ingredients ul,
+#method ul,
+#hint ul {
+  padding-left: 0.9em;
+}
+
+#ingredients li,
+#method li,
+#hint li {
+  padding-top: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+#ingredients p {
+  margin-bottom: 0.5em;
+}
+
+#hint p {
+  font-size: 0.9em;
+}
+
+#singlerecipetitle {
+  font-weight: bold;
+}
+
+.recipesubtitle {
+  background-color: rgb(0, 110, 204);
+  color: rgb(255, 255, 255);
+  padding: 0.3em;
+  padding-left: 0.5em;
+  border: 3px solid rgb(25, 25, 112);
+}
+
+#quantityrecipe {
+  font-weight: bold;
+}
+
+.ordlistrecipe {
+  margin-left: 1.5em;
+}
+.paddingricette{
+  margin-left: 0.75em;
+}
+
+/* Fine Pagina generale delle ricette*/
+
+/*Inizio News*/
+
+.sottotitolonews {
+  padding-bottom: 0.5em;
+  background-color: rgba(0, 174, 239, 0.85);
+  border: 3px solid rgb(25, 25, 112);
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+}
+
+.minititolonews {
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid rgb(25, 25, 112);
+  border-left: 3px solid rgb(25, 25, 112);
+  border-right: 3px solid rgb(25, 25, 112);
+}
+
+.news {
+  margin-bottom: 1em;
+  list-style-type: none;
+}
+.news a {
+  text-decoration: none;
+}
+.news p {
+  padding-top: 0.25em;
+  padding-left: 0.5em;
+  border-left: 3px solid rgb(25, 25, 112);
+  border-right: 3px solid rgb(25, 25, 112);
+  padding-bottom: 0.25em;
+}
+.testonotizia {
+  border-bottom: 3px solid rgb(25, 25, 112);
+  padding-bottom: 0.25em;
+}
+
+.redirectcompleto {
+  border-bottom: 3px solid rgb(25, 25, 112);
+}
+
+#navnews {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+#navnews li {
+  margin-right: 0.5em;
+  display: inline;
+  padding: 0.25em;
+  font-weight: bolder;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 0.90em;
+}
+#navnews li a {
+  text-decoration: none;
+}
+
+#forminsertnews fieldset {
+  background-color: rgba(176, 224, 230, 0.99);
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  border: 4px solid rgb(25, 25, 112);
+}
+
+#forminsertnews fieldset label {
+  margin-bottom: 2em;
+}
+
+#titoloform {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.titololabel {
+  font-size: large;
+  font-weight: bold;
+}
+
+#buttonnews {
+  padding: 0.25em;
+  border: 2px solid rgb(25, 25, 112);
+  font-size: medium;
+  font-weight: bold;
+}
+/* Fine News*/
+
+/*Inizio Forum*/
+
+.AccessButton {
+  margin-top: 1.5em;
+  margin-left: 17em;
+  padding: 1.25em 0.5em 1.25em 0.5em;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#bannedFromForum {
+  margin-top: 1em;
+}
+
+#post0 {
+  width: 96%;
+}
+.commenti {
+  margin-bottom: 4em;
+}
+.commenti button {
+  padding: 1em;
+  background-color: rgb(135, 206, 235);
+  border: 2px solid rgb(25, 25, 112);
+}
+
+.forumFieldset {
+  max-width: 100%;
+}
+
+.answerPostTextarea {
+  width: 80%;
+}
+
+.forumTextarea {
+  display: block;
+  box-sizing: border-box;
+  width: 95%;
+  height: 50%;
+}
+
+.block {
+  display: block;
+}
+
+.post textarea {
+  background-color: rgb(239, 250, 255);
+  border: 2px solid rgb(25, 25, 112);
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.3em;
+  resize: none;
+}
+
+.confirmLeaveAnswer {
+  margin-left: 1em;
+}
+
+.commenti textarea {
+  width: 96%;
+  display: block;
+  resize: none;
+  padding: 1em;
+  background-color: rgb(239, 250, 255);
+  border: 2px solid rgb(25, 25, 112);
+  resize: none;
+}
+
+.commenti fieldset {
+  border: 2px solid rgb(25, 25, 112);
+  background-color: rgb(135, 206, 235);
+}
+
+.post {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.post h3 {
+  margin-top: 0.5em;
+  margin-left: 0.85em;
+}
+.post label {
+  font-weight: bold;
+  display: block;
+  margin-left: 1em;
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+
+.miPiaceButton,
+.leaveAnswer {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  border: 2px solid rgb(25, 25, 112);
+  background-color: rgb(135, 206, 235);
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  font-weight: bold;
+}
+
+.likeBicipite {
+  height: 10%;
+  max-height: 3em;
+  max-width: 90%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.miPiaceButton {
+  margin-left: 1em;
+  margin-right: 0.5em;
+}
+
+.LikeCount {
+  font-size: large;
+}
+
+.othersComment {
+  margin-left: 2.4em;
+  margin-bottom: 0.5em;
+}
+
+.answer {
+  margin-top: 1em;
+}
+
+.answer p {
+  margin-left: 1em;
+  font-weight: bold;
+}
+
+.answer textarea {
+  width: 85%;
+  box-sizing: border-box;
+  margin-right: 3em;
+  margin-left: 3em;
+  resize: none;
+}
+
+textarea .text {
+  margin-top: 9em;
+}
+
+#creazionePost {
+  font-weight: bold;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+/*Fine Forum*/
+
+/*Inizio parte Workout*/
+
+#premise h2 {
+  margin-bottom: 1em;
+}
+
+#premise p {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+}
+
+#introToWS h2 {
+  margin-bottom: 1em;
+}
+
+#introToWS p {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+}
+
+#benefits h2 {
+  margin-bottom: 1em;
+}
+
+#benefits p {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+}
+
+#whichSplit h2 {
+  margin-bottom: 1em;
+}
+
+#whichSplit p {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+}
+
+tbody th {
+  font-weight: normal;
+  text-align: left;
+}
+
+#splitsMenu {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  padding-left: 0.25em;
+}
+
+#splitsMenu ul {
+  margin-left: 1em;
+  padding-right: 6em;
+  padding-left: 0.5em;
+}
+
+#splitsMenu ul li {
+  margin-bottom: 0.5em;
+}
+
+#splitsMenu a {
+  color: rgb(0, 110, 204);
+  text-decoration: underline;
+}
+
+#whatis h2 {
+  margin-bottom: 1em;
+}
+
+#whatis p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+#whatis img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#whatis ul {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+
+#why h2 {
+  margin-bottom: 1em;
+}
+
+#why p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+#example h2 {
+  margin-bottom: 1em;
+}
+
+#example p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+#splitTable {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+}
+
+#splitTable table {
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#splitTable td,
+th {
+  border: 1px solid rgb(25, 25, 112);
+}
+
+#splitTable td {
+  padding-left: 0.25em;
+}
+
+.day {
+  background-color: rgb(135, 206, 235);
+}
+
+#splitTable th {
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#splitTable tbody th {
+  width: 70%;
+}
+
+.setrep {
+  text-align: center;
+}
+
+#splitTable td {
+  padding-top: 0.25em;
+  table-layout: auto;
+}
+
+#elencobs li {
+  margin-bottom: 0.5em;
+}
+
+#elencoppl1 li {
+  margin-bottom: 0.5em;
+}
+
+#elencoppl2 li {
+  margin-bottom: 0.5em;
+}
+
+#elencoul li {
+  margin-bottom: 0.5em;
+}
+
+.workoutcaption {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+
+/*Immagini workout interne*/
+
+#arnold {
+  width: 100%;
+}
+
+#pplImg {
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#upperlower {
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#fullbody {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*Fine parte workout*/
+
+/*Login e Signup*/
+
+
+#notLoggedIn h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+#notLoggedIn fieldset {
+  border: 2px solid rgb(0, 0, 139);
+  background-color: rgb(135, 206, 235);
+  width: 99%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#notLoggedIn p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#usernameInputArea {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#passwordInputArea {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loginButton {
+  padding: 0.2em;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(25, 25, 112);
+  font-size: 100%;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+#notLoggedIn label {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/*Pagina profilo*/
+
+#profileBody{
+  overflow: hidden;
+}
+
+
+#change label {
+  padding-right: 0.5em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+#change input {
+  padding-right: 0.5em;
+
+  display: block;
+}
+
+#change input[type="button"] {
+  margin-top: 3em;
+  display: block;
+}
+
+/* Fine pagina profilo */
+/* Pannello amministratore*/
+
+.select{
+  max-width: 100%;
+}
+
+#notAdmin {
+  margin-top: 1em;
+}
+
+#promotion {
+  margin-bottom: 1em;
+}
+
+#promotion h2 {
+  margin-bottom: 1em;
+}
+
+#promotion select {
+  margin-top: 1em;
+  display: block;
+  margin-top: 1em;
+}
+
+#deleteRecipe {
+  margin-bottom: 1em;
+}
+
+#deleteRecipe h2 {
+  margin-bottom: 1em;
+}
+
+#deleteRecipe select {
+  display: block;
+  margin-top: 1em;
+}
+
+#deleteNews {
+  margin-bottom: 1em;
+}
+
+#deleteNews h2 {
+  margin-bottom: 1em;
+}
+
+#deleteNews select {
+  display: block;
+  margin-top: 1em;
+}
+
+#deletePost {
+  margin-bottom: 1em;
+}
+
+#deletePost h2 {
+  margin-bottom: 1em;
+}
+
+#deletePost select {
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 1em;
+}
+
+#deletePost textarea {
+  margin-bottom: 1em;
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+  resize: none;
+  margin-top: 1em;
+}
+
+#deletePost button {
+  margin-bottom: 1em;
+  display: block;
+}
+
+#deleteAnswer {
+  margin-bottom: 1em;
+}
+
+#deleteAnswer h2 {
+  margin-bottom: 1em;
+}
+
+#deleteAnswer textarea {
+  margin-bottom: 1em;
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+  resize: none;
+  margin-top: 1em;
+  display: block;
+}
+
+#deleteAnswer select {
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 1em;
+}
+
+#deleteAnswer button {
+  margin-bottom: 1em;
+  display: block;
+}
+
+#addNews {
+  margin-bottom: 1em;
+}
+
+#addNews h2 {
+  margin-bottom: 1em;
+}
+
+#addNews p {
+  margin-bottom: 1em;
+}
+
+#addNews input {
+  margin-bottom: 1em;
+  display: block;
+}
+
+#newsTypeLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#type {
+  display: block;
+  margin-bottom: 1em;
+}
+
+#newsTitleLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#newsTitle {
+  display: block;
+  margin-bottom: 1em;
+}
+
+#newsTextLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#newsText {
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+  display: block;
+  margin-bottom: 1em;
+}
+
+#newsLinkLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#newsLink {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#removeAccount {
+  margin-bottom: 1em;
+}
+
+#addRecipe {
+  margin-bottom: 1em;
+}
+
+#addRecipe h2 {
+  margin-bottom: 1em;
+}
+
+#addRecipe p {
+  margin-bottom: 0.5em;
+}
+
+#recipeTitleLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeTitle {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeDescriptionLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeDescription {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeImageLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeImage {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeAltLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeAlt {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeIngredientsLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeIngredients {
+  display: block;
+  margin-bottom: 0.5em;
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+}
+
+#recipeMethodLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeMethod {
+  display: block;
+  margin-bottom: 0.5em;
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+}
+
+#recipeHintLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipeHint {
+  display: block;
+  margin-bottom: 0.5em;
+  border: 2px solid rgb(25, 25, 112);
+  padding: 0.3em;
+}
+
+#recipePeopleLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#recipePeople {
+  display: block;
+  margin-bottom: 1em;
+}
+
+#revokeBan {
+  margin-bottom: 1em;
+}
+
+#revokeBan h2 {
+  margin-bottom: 1em;
+}
+
+#revokeBan select {
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 1em;
+}
+
+#errorBanMessage {
+  margin-bottom: 1em;
+}
+
+#banUserFromForum {
+  margin-bottom: 1em;
+}
+
+#banUserFromForum h2 {
+  margin-bottom: 1em;
+}
+
+#banUserFromForum select {
+  margin-top: 1em;
+  display: block;
+}
+
+#notBanned {
+  margin-bottom: 1em;
+}
+
+#errorUnbanMessage {
+  margin-bottom: 1em;
+}
+
+#removeAccount {
+  margin-bottom: 1em;
+}
+
+#removeAccount h2 {
+  margin-bottom: 1em;
+}
+
+#removeAccount p {
+  margin-bottom: 0.5em;
+}
+
+#removeAccount select {
+  margin-bottom: 1em;
+  display: block;
+  margin-top: 1em;
+}
+
+.adminarea {
+  width: 100%;
+  min-width: 0em;
+  resize: none;
+}
+/*Fine Pannello Admin*/
+/*MEDIA QUERY*/
+
+@media (max-width: 640px) {
+  /*INIZIO PARTE COMUNE*/
+  html {
+    background-image: url("../images/sfondo.png");
+    background-color: rgb(255, 255, 255);
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  #logo {
+    display: block;
+    margin: auto;
+  }
+
+  #header h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0em;
+    margin-bottom: 0.5em;
+  }
+
+  #breadcrumb {
+    font-size: 1em;
+  }
+
+  .padding {
+    padding-top: 1em;
+  }
+
+  #menu {
+    width: 100%;
+    flex: none;
+  }
+
+  #menu ul {
+    padding: 0em;
+    padding-top: 0.1em;
+    margin: 0em;
+    text-align: center;
+    width: 100%;
+  }
+
+  #menu ul li {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+  }
+
+  #currentLink {
+    background-color: rgb(0, 110, 204);
+    color: rgb(255, 255, 255);
+  }
+
+  #container {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #content {
+    border: none;
+    width: 96%;
+    padding-left: 0.45em;
+  }
+
+  #newscontent {
+    border: none;
+    width: 96%;
+    padding-left: 0.95em;
+  }
+
+  textarea {
+    width: 95%;
+  }
+
+  #content p,
+  #newscontent p {
+    padding-left: 0.5em;
+  }
+
+  #menuhamburger {
+    width: 1.2em;
+  }
+
+  #chiudimenu {
+    width: 1.2em;
+  }
+
+  #close {
+    width: 5%;
+  }
+  /*FINE PARTE COMUNE*/
+
+  /*INIZIO HOME*/
+  #contenthome {
+    width: 100%;
+    border: none;
+    margin: 0em;
+    margin-top: 3em;
+    padding: 0em;
+    min-height: 20em;
+  }
+
+  #chisiamo p {
+    padding: 0.5em;
+  }
+
+  #fotochisiamo {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+  }
+  /*FINE HOME */
+
+  /*INIZIO WORKOUT
+  Non c'è CSS in questa sezione.  
+  FINE WORKOUT*/
+
+  /*INIZIO ALLENAMENTO SPECIFICO*/
+
+  #splitTable {
+    margin: 0em;
+    margin-bottom: 0.5em;
+    padding: 0em;
+  }
+
+  thead {
+    display: none;
+  }
+
+  #splitTable tbody th {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0em;
+    padding-right: 0em;
+    padding-left: 0.25em;
+    text-align: center;
+  }
+
+  th[title]:before,
+  td[title]:before {
+    content: attr(title) ":\00A0";
+    font-weight: bold;
+  }
+
+  tr,
+  td,
+  th {
+    display: block;
+    width: 100%;
+  }
+
+  #splitTable table {
+    border-collapse: collapse;
+    margin-top: 1.5em;
+    width: 98%;
+  }
+
+  .primaCella {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 110, 204);
+  }
+
+  /*FINE ALLENAMENTO SPECIFICO*/
+
+  /*INIZIO ALIMENTAZIONE*/
+
+  .recipeImage {
+    width: 100%;
+  }
+
+  .recipeTitle {
+    border: 3px solid rgb(25, 25, 112);
+  }
+
+  .linkricetta {
+    padding: 0em;
+  }
+
+  .recipeAd {
+    border: 3px solid rgb(25, 25, 112);
+    border-top: none;
+  }
+
+  /*FINE ALIMENTAZIONE*/
+
+  /*INIZIO SINGOLA RICETTA*/
+
+  #recipeContent {
+    border: none;
+    margin: 0em;
+    padding: 0em;
+    padding-top: 1em;
+    width: 100%;
+  }
+
+  #back {
+    padding-top: 1em;
+    font-size: 0.95em;
+  }
+
+  #recipeInnerImage {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /*FINE SINGOLA RICETTA*/
+
+  /*INIZIO FORUM*/
+
+  #bottoneinvio {
+    margin-left: 1.5em;
+  }
+
+  .commenti {
+    width: 100%;
+  }
+
+  #creazionePost {
+    margin: 0em;
+    padding: 0em;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .post {
+    margin: auto;
+  }
+
+  .post h2 {
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  .forumFieldset {
+    width: 95%;
+    margin-left: 0.25em;
+    max-width: 100%;
+    min-width: 0em;
+  }
+
+  #loggato {
+    max-width: 100%;
+  }
+
+  #post0 {
+    width: 80%;
+    max-width: 100%;
+    min-width: 0em;
+    margin: auto;
+  }
+
+  .forumFieldset h3 {
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .forumFieldset label {
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .post textarea {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .miPiaceButton {
+    margin: 0em;
+    margin-left: 1em;
+  }
+
+  .leaveAnswer {
+    margin: 0.5em;
+  }
+
+  .confirmLeaveAnswer {
+    margin-left: 1em;
+  }
+
+  .answer {
+    display: block;
+  }
+
+  .answer textarea {
+    width: 80%;
+  }
+
+  .othersComment {
+    margin: 0em;
+    margin-left: 5%;
+    margin-bottom: 0.3em;
+  }
+
+  /*FINE FORUM*/
+
+  /*INIZIO NEWS*/
+
+  #navnews {
+    width: 97.5%;
+    margin-top: 0.4em;
+    font-size: 0.93em;
+  }
+
+  #navnews li {
+    display: block;
+    text-align: center;
+  }
+
+  #NewsList {
+    width: 96%;
+  }
+
+  .news {
+    margin: 0em;
+    margin-bottom: 0.7em;
+  }
+
+  /*FINE NEWS*/
+
+  /*LOGIN
+  Non c'è CSS in questa fase.
+  FINE LOGIN*/
+
+  /*PROFILO*/
+
+  #change {
+    text-align: center;
+  }
+
+  #change input {
+    width: 95%;
+    margin: auto;
+  }
+
+  #change input[type="button"] {
+    margin: auto;
+    margin-top: 3em;
+    display: block;
+  }
+
+  /*FINE PROFILO*/
+
+  /*ADMIN*/
+
+  .adminarea {
+    width: 96%;
+  }
+
+  /*FINE ADMIN*/
+
+}
+
+/*MEDIA QUERY PER STAMPA*/
+@media print {
+  /*GENERALE*/
+
+  #menu {
+    display: none;
+  }
+
+  html {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+  }
+
+  #header {
+    padding: 0.1em 1.5em 0.5em;
+  }
+
+  #header a {
+    padding: 0.2em;
+    border-radius: 6px;
+    text-decoration: underline;
+    border: none;
+    color: rgb(0, 0, 0);
+  }
+
+  #header h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  #logo {
+    display: none;
+  }
+  #breadcrumb {
+    color: rgb(0, 0, 0);
+    margin-top: -3em;
+    padding: 1em 1.5em;
+  }
+
+  #breadcrumb a {
+    color: rgb(0, 0, 0);
+  }
+
+  #content,
+  #newscontent {
+    margin-left: 0em;
+    border-left: none;
+  }
+
+  .aiuti {
+    display: none;
+  }
+
+  #content h1,
+  #newscontent h1 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-align: center;
+    border: none;
+    color: rgb(0, 0, 0);
+  }
+
+  #content h2,
+  #newscontent h2 {
+    color: rgb(0, 0, 0);
+  }
+  /*FINE GENERALE*/
+
+  /*INIZIO HOME*/
+
+  #contenthome {
+    overflow: hidden;
+    border-left: none;
+    width: 100%;
+  }
+
+  #contenthome h1 {
+    color: rgb(0, 0, 0);
+  }
+
+  #fotochisiamo{
+    display: none;
+  }
+
+  #h2home , #scrittahome{
+    display: none;
+  }
+  /*FINE HOME*/
+
+  /*INIZIO ALIMENTAZIONE PAGINA GENERALE*/
+
+  .recipeImage {
+    width: 30%;
+    display: block;
+    margin: auto;
+  }
+
+  .recipeTitle {
+    color: rgb(0, 0, 0);
+    padding: 0.3em;
+    padding-left: 0.5em;
+  }
+
+  #alimentationcontent dd p a {
+    color: rgb(0, 0, 0);
+  }
+
+  #alimentationcontent dd p a:visited {
+    color: rgb(0, 0, 0);
+  }
+
+  /*WORKOUT GENERALE*/
+
+  #splitsMenu ul li a {
+    color: rgb(0, 0, 0);
+  }
+
+  #splitsMenu ul li a:visited {
+    color: rgb(0, 0, 0);
+  }
+
+  #whatis h2 {
+    border: none;
+  }
+
+  #why h2 {
+    border: none;
+  }
+
+  #example h2 {
+    border: none;
+  }
+
+  #premise h2 {
+    border: none;
+  }
+
+  #introToWS h2 {
+    border: none;
+  }
+
+  #benefits h2 {
+    border: none;
+  }
+
+  #whichSplit h2 {
+    border: none;
+  }
+
+  #arnold {
+    display: none;
+  }
+
+  #pplImg {
+    display: none;
+  }
+
+  #upperlower {
+    display: none;
+  }
+
+  #fullbody {
+    display: none;
+  }
+
+  #splitTable .primaCella{
+    width: 70%;
+  }
+
+  #splitTable {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.25em;
+  }
+  
+  #splitTable table {
+    margin-bottom: 1em;
+    border-collapse: collapse;
+    width: 100%;
+    display: table;
+  }
+  
+  #splitTable tbody td,
+  th {
+    border: 1px solid rgb(25, 25, 112);
+  }
+  
+  #splitTable tbody td {
+    padding-left: 0.25em;
+    width: 15%;
+  }
+  
+  th[title]:before,
+  td[title]:before {
+    content: "";
+  }
+  
+  #splitTable tbody th {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 70%;
+    display: table-cell;
+    color: rgb(0, 0, 0);
+    text-align: left;
+  }
+  
+  #splitTable tbody{
+    display: table-row-group;
+    width: 100%;
+  }
+
+  #splitTable tbody tr, #splitTable thead tr{
+    width: 100%;
+    display: table-row;
+  }
+  .setrep {
+    text-align: center;
+  }
+  
+  #splitTable tbody td {
+    padding-top: 0.25em;
+    display: table-cell;
+  }
+
+  #splitTable thead{
+    width: 100%;
+    display: table-row-group;
+  }
+
+  #splitTable thead th{
+    display: table-cell;
+  }
+  /*FINE WORKOUT*/
+
+  /* INIZIO PAGINA RICETTA SINGOLA*/
+
+  #recipeInnerImage {
+    height: 60%;
+    max-height: 20em;
+    max-width: 60%;
+    margin-bottom: 1.5em;
+  }
+  #back {
+    display: none;
+  }
+
+  #singlerecipetitle {
+    border: none;
+  }
+
+  .recipesubtitle {
+    border: none;
+    color: rgb(0, 0, 0);
+  }
+  /* FINE PAGINA RICETTA SINGOLA*/
+
+  /* INIZIO PAGINA FORUM*/
+
+  .forumFieldset {
+    max-width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+  .forumTextarea {
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    height: 50%;
+  }
+
+  #post0{
+    margin-left: 0em;
+  }
+  #bottoneinvio{
+    margin-left: 0em;
+    color: rgb(0, 0, 0);
+  }
+
+  .post textarea {
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.3em;
+    resize: none;
+  }
+
+  .post {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .post h3 {
+    margin-top: 0.5em;
+    margin-left: 15em;
+  }
+  .post label {
+    font-weight: bold;
+    display: block;
+    margin-left: 1em;
+    margin-top: 0em;
+    margin-bottom: 0.3em;
+  }
+
+  .miPiaceButton,
+  .leaveAnswer {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    font-weight: bold;
+  }
+
+  .likeBicipite {
+    height: 10%;
+    max-height: 3em;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .othersComment {
+    margin-left: 2.4em;
+    margin-bottom: 0.5em;
+  }
+
+  .answer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .answer textarea {
+    width: 85%;
+    margin-right: 3em;
+    margin-left: 3em;
+    resize: none;
+  }
+
+  #creazionePost {
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+
+  /* FINE PAGINA FORUM*/
+
+  /* INIZIO PAGINA NEWS*/
+
+  .news a:link:after,
+  a:visited:after {
+    color: rgb(0, 0, 0);
+    content: " [" attr(href) "] ";
+    font-size: 90%;
+  }
+
+  #NewsList li p a:visited {
+    color: rgb(0, 0, 0);
+  }
+  #NewsList li p a {
+    color: rgb(0, 0, 0);
+  }
+
+  #navnews {
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  #navnews li {
+    margin-right: 0.5em;
+    display: inline;
+    padding: 0.25em;
+    font-weight: bolder;
+  }
+  #navnews li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
+  #navnews li a:visited {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
+  /* FINE PAGINA NEWS*/
+
+  /*INIZIO LOGIN e SIGN UP*/
+  #notLoggedIn h2 {
+    border: none;
+  }
+  /*FINE LOGIN*/
+
+  /*PANNELLO UTENTE*/
+  #change label {
+    padding-right: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+    text-align: left;
+  }
+  
+  #change input{
+    margin-top: 0.5em;
+    width: auto;
+    display: block;
+    margin-left: 0em;
+  }
+
+  #change input[type="button"]{
+    margin-left: 0em;
+  }
+  /*FINE PANNELLO UTENTE*/
+
+  /*PANNELLO ADMIN*/
+  #promotion h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #deleteRecipe h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #deleteNews h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #deletePost h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #deleteAnswer h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #addNews h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #addRecipe h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #revokeBan h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #banUserFromForum h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+  #removeAccount h2 {
+    margin-left: -0.5em;
+    margin-bottom: 0em;
+    border: none;
+  }
+
+  #deletePost textarea {
+    resize: none;
+  }
+
+  #deleteAnswer textarea {
+    resize: none;
+  }
+
+  #addNews textarea {
+    resize: none;
+  }
+
+  #addRecipe textarea {
+    resize: none;
+  }
+  /*FINE PANNELLO ADMIN*/
+}

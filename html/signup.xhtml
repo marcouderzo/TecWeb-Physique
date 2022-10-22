@@ -1,0 +1,124 @@
+<includeBasePlaceholder />
+
+<blockDefHeaderPlaceholder />
+<img src="images/logo.png" alt="Physique Logo che rappresenta una mano che alza un manubrio" id="logo"/>
+<h1>%%Signup%%</h1>
+
+<blockEndPlaceholder />
+
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a><img id = "menuhamburger" src="images/hamburger.png" alt="apri menù" class="nascosto" onclick="openmenu()"/>
+    <img id = "chiudimenu" src= "images/close.png" class="nascosto" alt="x per chiudere menù" onclick="closemenu()"/>  » %%Signup%% </p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+
+<blockDefMenuPlaceholder />
+
+
+<ul>
+
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=workout">Workout</a></li>
+    <li><a href = "/mtesser/?r=alimentation">Alimentazione</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=news">News</a></li>
+    <ifLoggedPlaceholder />
+    <li><a href = "/mtesser/?r=profile">Profilo</a></li>
+    <endIfPlaceholder />
+    <ifAdminPlaceholder />
+    <li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+    <endIfPlaceholder />
+    
+</ul>
+
+<blockEndPlaceholder />
+
+
+<blockDefContentPlaceholder />
+
+<div id="notLoggedIn">
+
+<h2>Crea un Nuovo Utente</h2>
+<p>Nella creazione di un nuovo utente, non è ammesso l'uso di Apostrofi.</p>
+
+<form method="post" action = "api/signup.php" onsubmit="return verifysignup();">
+    <fieldset>
+        <ifErrordatabasefailPlaceholder />
+                
+            <p id = "edbfa" class = "rosso">Il %%database%% non è raggiungibile</p>
+
+        <endIfPlaceholder />
+        <p id = "erroreusername" class = "rosso nascosto">Questo %%username%% non è valido</p>
+        <ifErrorusernamenonvalidoPlaceholder />
+                
+            <p id = "eusnv" class = "rosso">Lo %%username%% non è valido</p>
+
+        <endIfPlaceholder />
+        <ifErrorusernameesistentePlaceholder />
+                
+            <p id = "euses" class = "rosso">Questo %%username%% è già stato utilizzato</p>
+
+        <endIfPlaceholder />
+        <label for="username">Inserisci il tuo %%username%%</label>
+        <input type="text" id="username" name="username"/>
+        <p id = "emailnonvalida" class = "rosso nascosto">Questa %%email%% non è valida</p>
+        <ifErroremailnonvalidaPlaceholder />
+                
+            <p id = "eemnv" class = "rosso">L'%%email%% non è valida</p>
+
+        <endIfPlaceholder />
+        <ifErroremailesistentePlaceholder />
+                
+            <p id = "eemes" class = "rosso">Questa %%email%% è già stata utilizzata</p>
+
+        <endIfPlaceholder />
+        <label for="mail">Inserisci il tuo indirizzo %%email%%</label>
+        <input type="text" id="mail" name="mail"/>
+        <p id = "nomenonvalido" class = "rosso nascosto">Questo nome non è valido</p>
+        <ifErrornomenonvalidoPlaceholder />
+                
+            <p id = "enonv" class = "rosso">Il nome non è valido</p>
+
+        <endIfPlaceholder />
+        <label for="name">Inserisci il tuo nome</label>
+        <input type="text" id="name" name="name"/>
+        <p id = "cognomenonvalido" class = "rosso nascosto">Questo cognome non è valido</p>
+        <ifErrorcognomenonvalidoPlaceholder />
+                
+            <p id = "econv" class = "rosso">Il cognome non è valido</p>
+
+        <endIfPlaceholder />
+        <label for="surname">Inserisci il tuo cognome</label>
+        <input type="text" id="surname" name="surname"/>
+        <p id = "errorepassword" class = "nascosto rosso">La %%password%% non è valida</p>
+        <ifErrorpasswordnonvalidaPlaceholder />
+                
+            <p id = "epanv" class = "rosso">La %%password%% non è valida</p>
+
+        <endIfPlaceholder />
+        <label for="password">Inserisci la tua %%password%%</label>
+        <input type="password" id="password" name="password"/>
+        <ifErrorpasswordnoncorrispondentePlaceholder />
+                
+            <p id = "epanc" class = "rosso">Le due %%password%% non corrispondono</p>
+
+        <endIfPlaceholder />
+        <label for="rePassword">Reinserisci la tua %%password%%</label>
+        <input type="password" id="rePassword" name="rePassword"/>
+        <input type="hidden" tabindex="-1" value="<redirectPlaceholder />" name="redirect"/>
+        <input type="submit" class="loginButton" name="login" value="Registrati"/>
+
+    </fieldset>
+</form>
+</div>
+
+<blockEndPlaceholder />

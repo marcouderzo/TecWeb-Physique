@@ -1,0 +1,107 @@
+<includeBasePlaceholder />
+<!--
+<includeworkout/BroSplitPlaceholder /> 
+<includeworkout/PplPlaceholder />
+<includeworkout/FbPlaceholder /> 
+<includeworkout/UlPlaceholder />
+-->
+
+<blockDefHeaderPlaceholder />
+<img
+  src="images/logo.png"
+  alt="Physique Logo che rappresenta una mano che alza un manubrio"
+  id="logo"
+/>
+<h1>%%<typePlaceholder />%%</h1>
+
+<ifNotloggedPlaceholder />
+<p>
+  <a xml:lang="en" lang="en" href="/mtesser/?r=login">Login</a>
+  
+  <a xml:lang="en" lang="en" href="/mtesser/?r=signup">Signup</a>
+</p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+<p><a xml:lang="en" lang="en" href="/mtesser/?r=logout">Logout</a></p>
+<endIfPlaceholder />
+
+<blockEndPlaceholder />
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>
+  Ti trovi in <a href="/mtesser/?r=home" xml:lang="en" lang="en">Home</a> »
+  <a xml:lang="en" href="/mtesser/?r=workout">Workout</a> »
+  <span xml:lang="en" lang="en">
+    <img
+      id="menuhamburger"
+      src="images/hamburger.png"
+      class="nascosto"
+      alt="apri menù"
+      onclick="openmenu()"
+    />
+    <img
+      id="chiudimenu"
+      src="images/close.png"
+      class="nascosto"
+      alt="x per chiudere menù"
+      onclick="closemenu()"
+    />
+    <typePlaceholder />
+  </span>
+</p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class="aiuti" href="#content">Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+<blockDefMenuPlaceholder />
+
+<ul>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=home">Home</a></li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=workout">Workout</a></li>
+  <li><a href="/mtesser/?r=alimentation">Alimentazione</a></li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=forum">Forum</a></li>
+  <li xml:lang="en" lang="en"><a href="/mtesser/?r=news">News</a></li>
+  <ifLoggedPlaceholder />
+  <li><a href="/mtesser/?r=profile">Profilo</a></li>
+  <endIfPlaceholder />
+  <ifAdminPlaceholder />
+  <li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+  <endIfPlaceholder />
+</ul>
+
+<blockEndPlaceholder />
+
+<blockDefContentPlaceholder />
+
+<ifBrosplitPlaceholder />
+
+<blockSetBrosplitPlaceholder />
+
+<endIfPlaceholder />
+
+<ifPplPlaceholder />
+
+<blockSetPplPlaceholder />
+
+<endIfPlaceholder />
+
+<ifUlPlaceholder />
+
+<blockSetUlPlaceholder />
+
+<endIfPlaceholder />
+
+<ifFbPlaceholder />
+
+<blockSetFbPlaceholder />
+
+<endIfPlaceholder />
+
+<blockEndPlaceholder />

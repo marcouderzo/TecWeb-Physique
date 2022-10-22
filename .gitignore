@@ -1,0 +1,8 @@
+.idea/
+tmphtml/
+sql/mtesser.sql
+*.out
+*.aux
+*.log
+*.fls
+*.fdb_latexmk

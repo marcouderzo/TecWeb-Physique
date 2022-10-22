@@ -1,0 +1,65 @@
+<includeAdminbasePlaceholder />
+
+<blockDefHeaderPlaceholder />
+<img src="images/logo.png" alt="Logo di Physique che rappresenta una mano che alza un manubrio" id="logo" />
+<h1>Pannello %%admin%%</h1>
+
+<ifNotloggedPlaceholder />
+<p>
+    <a xml:lang="en" lang = "en" href="/mtesser/?r=login&amp;prev=<redirectPlaceholder />">Login</a> 
+    <a xml:lang="en" lang = "en" href="/mtesser/?r=signup&amp;prev=<redirectPlaceholder />">Signup</a>
+</p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+<p><a xml:lang="en" lang = "en" href="/mtesser/?r=logout">Logout</a></p>
+<endIfPlaceholder />
+
+<blockEndPlaceholder />
+
+<blockDefBreadcrumbPlaceholder />
+
+<p>Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a><img id = "menuhamburger" src="images/hamburger.png" alt="apri menù" class="nascosto" onclick="openmenu()"/>
+    <img id = "chiudimenu" src= "images/close.png" alt="x per chiudere menù" class="nascosto" onclick = "closemenu()"/> » Pannello %%admin%%</p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+<blockDefMenuPlaceholder />
+
+<ul>
+
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=workout">Workout</a></li>
+    <li><a href = "/mtesser/?r=alimentation">Alimentazione</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+    <li xml:lang="en" lang = "en"><a href = "/mtesser/?r=news">News</a></li>
+    <ifLoggedPlaceholder />
+    <li><a href = "/mtesser/?r=profile">Profilo</a></li>
+    <endIfPlaceholder />
+    <li id = "currentLink"> Pannello admin</li>
+    
+</ul>
+
+<blockEndPlaceholder />
+
+<blockDefContentPlaceholder />
+
+<ifNotadminPlaceholder />
+
+<p id="notAdmin">Solo un %%admin%% può accedere a questa pagina</p>
+
+<endIfPlaceholder />
+
+<ifAdminPlaceholder />
+
+<AdmincontentPlaceholder />
+
+<endIfPlaceholder />
+
+<blockEndPlaceholder />

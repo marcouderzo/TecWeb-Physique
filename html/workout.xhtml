@@ -1,0 +1,128 @@
+<includeBasePlaceholder />
+
+<blockDefHeaderPlaceholder />
+
+<img src="images/logo.png" alt="Physique Logo che rappresenta una mano che alza un manubrio" id="logo"/>
+<h1>Workout</h1>
+
+<ifNotloggedPlaceholder />
+    <p>
+        <a xml:lang="en" lang = "en" href="/mtesser/?r=login&amp;prev=<redirectPlaceholder />">Login</a>
+        
+        <a xml:lang="en" lang = "en" href="/mtesser/?r=signup&amp;prev=<redirectPlaceholder />">Signup</a>
+    </p>
+<endIfPlaceholder />
+
+<ifLoggedPlaceholder />
+<p><a xml:lang="en" lang = "en" href="/mtesser/?r=logout&amp;prev=<redirectPlaceholder />">Logout</a></p>
+<endIfPlaceholder />
+
+
+<blockEndPlaceholder />
+
+
+<blockDefBreadcrumbPlaceholder />
+
+<p><img id = "menuhamburger" src="images/hamburger.png" class="nascosto" alt="apri menù" onclick="openmenu()"/>
+    <img id = "chiudimenu" src= "images/close.png" class="nascosto" alt="x per chiudere menù" onclick="closemenu()"/>
+    Ti trovi in <a href = "/mtesser/?r=home" xml:lang="en" lang = "en">Home</a>  » %%Workout%% </p>
+
+<blockEndPlaceholder />
+
+<blockDefHelpPlaceholder />
+
+<a class = "aiuti" href="#content" >Vai al contenuto</a>
+
+<blockEndPlaceholder />
+
+<blockDefMenuPlaceholder />
+
+
+
+<ul>
+
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=home">Home</a></li>
+<li xml:lang="en" lang = "en" id="currentLink">Workout</li>
+<li><a href = "/mtesser/?r=alimentation">Alimentazione</a></li>
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=forum">Forum</a></li>
+<li xml:lang="en" lang = "en"><a href = "/mtesser/?r=news">News</a></li>
+<ifLoggedPlaceholder />
+<li><a href = "/mtesser/?r=profile">Profilo</a></li>
+<endIfPlaceholder />
+<ifAdminPlaceholder />
+<li><a href="/mtesser/?r=adminPanel">Pannello %%admin%%</a></li>
+<endIfPlaceholder />
+</ul>
+
+<blockEndPlaceholder />
+
+<blockDefContentPlaceholder />
+
+<div id="premise">
+    <h2>Premessa</h2>
+    <p>
+        La sezione %%Workout%% di <span xml:lang="en" lang="en">Physique</span> si propone come una
+        %%wiki%% contenente i concetti basilari ed imprescindibili della programmazione
+        dell'allenamento.
+        É perciò rivolta al neofita che ha intenzione di entrare in palestra per la prima volta, o che si è finora allenato
+        in modo subottimale.
+    </p> 
+</div>
+
+<div id="introToWS">
+    <h2 xml:lang="en" lang = "en">Workout Splits</h2>
+    <p>
+        Allenarsi non significa entrare in palestra ed eseguire qualche esercizio senza criterio.
+        Significa avere un piano strutturato, rigoroso e
+        basato su evidenze scientifiche che permetta un adeguato stimolo di ogni gruppo muscolare.
+        Protrarre nel tempo un allenamento non strutturato, che, per preferenza del soggetto,
+        dà più enfasi ad alcuni gruppi muscolari, trascurandone invece altri,
+        non è mai un corretto approccio.    
+    </p>
+    <p>
+        Infatti, troviamo che spesso la postura delle spalle può risultare scorretta a causa di gruppi muscolari
+        anteriori molto più sviluppati e forti rispetto a quelli posteriori.
+        Inoltre, questo approccio all'allenamento aumenta il rischio di infortuni.
+        Si può quindi evincere che seguire un allenamento pianificato e bilanciato aiuta l'atleta a svolgere non
+        soltanto gli esercizi che preferisce, ma anche quelli
+        che vorrebbe furbamente evitare.
+    </p>   
+
+</div>
+
+<div id="benefits">
+    <h2>I Benefici di una programmazione studiata</h2>
+    <p>
+        Per ottenere risultati apprezzabili, è necessario un sovraccarico progressivo misurabile nel corso del tempo,
+        in particolare di settimane o mesi. Questo però non è fattibile se ogni allenamento
+        è diverso. É necessario quindi seguire un regime strutturato e sforzarsi di aumentare il volume allenante
+        ad ogni sessione, o aumentando il peso sollevato, o aumentando le ripetizioni.
+    </p>
+    <p>
+        Tutto ciò deve essere accompagnato da un adeguato riposo, essenziale per permettere al corpo di rigenerare
+        le fibre muscolari danneggiate. Nel caso di uno stile di allenamento senza struttura,
+        si può incorrere o in uno stimolo stressorio inadeguato, sia questo insufficiente per creare ipertrofia,
+        o eccessivo. Uno stimolo eccessivo viene chiamato sovrallenamento, ed è sia inutile, sia potenzialmente
+        controproducente.
+    </p>
+</div>
+
+    <div id="whichSplit">
+    <h2>Che <span xml:lang="en" lang = "en">Split</span> dovrei scegliere?</h2>
+    <p>
+        A seconda di quanti giorni a settimana vuoi allenarti, del tuo livello di esperienza e obiettivi, una %%routine%%
+        di allenamento può essere migliore
+        di un'altra. In ognuna, comunque, ogni sessione di allenamento sarà dedicata ad uno o più gruppi muscolari.
+    </p>
+</div>
+
+<div id="splitsMenu">
+    <ul>
+        <li><a href="/mtesser/?r=split&amp;type=bro">La %%Bro Split%%: vecchia scuola</a></li>
+        <li><a href="/mtesser/?r=split&amp;type=ppl">La %%Push-Pull-Legs%%: un approccio scientifico</a></li>
+        <li><a href="/mtesser/?r=split&amp;type=ul">L'%%Upper-Lower%%: a giorni alterni</a></li>
+        <li><a href="/mtesser/?r=split&amp;type=fb">Il %%Full Body%%: alta frequenza</a></li>
+    </ul>
+</div>
+
+<blockEndPlaceholder />

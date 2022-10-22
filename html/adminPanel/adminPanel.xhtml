@@ -1,0 +1,262 @@
+<div id = "promotion">
+
+<h2>Promuovi ad amministratore</h2>
+
+<label for = "userToPromote">Utente da promuovere: </label>
+
+<select id="userToPromote" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<button onclick="promote()">Promuovi utente</button>
+
+<p id="errorMessage" class="rosso nascosto">
+    L'utente non è stato promosso a causa di un errore. Si prega di riprovare.</p>
+
+</div>
+
+<div id="deleteRecipe">
+
+<h2>Elimina ricetta</h2>
+
+<label for = "recipe">Ricetta da eliminare: </label>
+
+<select id = "recipe" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<button onclick="deleteRecipe()">Elimina ricetta</button>
+
+<p id="deleteRecipeError" class="rosso nascosto">
+    La ricetta non è stata rimossa a causa di un errore. Si prega di riprovare.</p>
+
+</div>
+
+<div id= "deleteNews">
+
+<h2>Elimina news</h2>
+
+<label for = "news">Notizia da eliminare: </label>
+
+<select id = "news" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<button onclick="deleteNews()">Elimina %%news%%</button>
+
+<p id="deleteNewsError" class="rosso nascosto">
+    La news non è stata rimossa a causa di un errore. Si prega di riprovare.</p>
+
+</div>
+
+<div id="deletePost">
+<h2>Elimina %%post%%</h2>
+
+<label for = "post">%%Post%% da eliminare: </label>
+
+<select id = "post"  class = "select" onchange = "findText() ">
+    <option class= "nascosto"></option>
+</select>
+
+<label for = "postText">Testo del %%post%% da eliminare: </label>
+
+<textarea readonly="readonly" rows="10" cols="90" id = "postText" class = "adminarea"></textarea>
+
+<button onclick="deletePost()">Elimina %%Post%%</button>
+
+<p id="deletePostError" class="rosso nascosto"></p>
+
+</div>
+
+<div id="deleteAnswer">
+<h2>Elimina risposta</h2>
+
+<label for = "post1">%%Post%% selezionato: </label>
+<select id = "post1"  class = "select" onchange = "findTextAndAnswer()">
+    <option class= "nascosto"></option>
+</select>
+<label for = "postText1">Testo del %%post%% selezionato: </label>
+<textarea readonly="readonly" rows="10" cols="90" id = "postText1" class = "adminarea"></textarea>
+
+<label for = "answer">Risposta da eliminare: </label>
+<select id = "answer"  class = "select" onchange="findAnswerText()">
+    <option class= "nascosto"></option>
+</select>
+<label for = "answerText1">Testo della risposta da eliminare: </label>
+<textarea readonly="readonly" rows="10" cols="90" id = "answerText1" class = "adminarea"></textarea>
+
+<button onclick="deleteAnswer()">Elimina risposta</button>
+
+<p id="deleteAnswerError" class="rosso nascosto"></p>
+
+</div>
+
+
+<div id="addNews">
+
+<h2>Aggiungi news</h2>
+<p>Si prega di inserire, per motivi di accessibilità, le parole in inglese aggiungendo un
+    doppio simbolo percentuale (%%)  sia prima che dopo la parola in questione</p>
+
+<ifErrortypePlaceholder />
+
+<p id = "typeError" class = "rosso">Qualcosa è andato storto con il tipo, si prega di riselezionarlo</p>
+
+<endIfPlaceholder />
+
+<label for="type" id="newsTypeLabel">Inserisci il tipo della %%news%%</label>
+
+<select id = "type" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<ifEtiPlaceholder />
+
+<p id = "newsTitleError" class = "rosso">Si prega di ricontrollare il titolo della %%news%%, si tenga presente il limite di 50 caratteri</p>
+
+<endIfPlaceholder />
+
+<label for="newsTitle" id="newsTitleLabel" >Inserisci il titolo della news  (massimo 50 caratteri)</label>
+<input type="text" id = "newsTitle" maxlength="50"></input>
+
+<ifErrortextPlaceholder />
+
+<p id = "newsTextError" class = "rosso">Il testo della %%news%% non può essere vuoto</p>
+
+<endIfPlaceholder />
+
+<label for="newsText" id="newsTextLabel">Inserisci il testo della %%news%%</label>
+<textarea rows="10" cols="90" id = "newsText" class = "adminarea"></textarea>
+
+<ifErrorlinkPlaceholder />
+
+<p id = "newsLinkError" class = "rosso">Si prega di inserire un %%link%% valido</p>
+
+<endIfPlaceholder />
+
+<label for="newsLink" id="newsLinkLabel">Inserisci il %%link%% della fonte della %%news%%</label>
+<input type = "text" id = "newsLink"></input>
+<input type = "button" onclick = "sendNews()" value = "Aggiungi"/>
+
+
+</div>
+
+
+<div id="addRecipe">
+<h2>Aggiungi ricetta</h2>
+
+<p>Si prega di inserire, per motivi di accessibilità, le parole in inglese aggiungendo un
+    doppio simbolo percentuale (%%)  sia prima che dopo la parola in questione</p>
+
+<ifErrorrecipetitlePlaceholder />
+<p class = "rosso" id = "recipeNameError">Il nome della ricetta non può essere vuoto</p>
+<endIfPlaceholder />
+
+<label for="recipeTitle" id="recipeTitleLabel">Inserisci il nome della ricetta</label>
+<input type="text" id="recipeTitle" maxlength="60"></input>
+
+<ifErrorrecipedescrPlaceholder />
+<p class = "rosso" id = "recipeDescriptionError">La descrizione della ricetta non può essere vuota</p>
+<endIfPlaceholder />
+
+<label for="recipeDescription" id="recipeDescriptionLabel">Inserisci una breve descrizione della ricetta</label>
+<input type="text" id="recipeDescription" maxlength="100"></input>
+
+<ifErrorrecipeimagePlaceholder />
+<p class = "rosso" id = "recipeImageError">Il campo con il nome dell'immagine contiene un nome non valido. Ricordarsi di specificare il formato</p>
+<endIfPlaceholder />
+
+<label for="recipeImage" id="recipeImageLabel">Inserisci il nome dell'immagine della ricetta (incluso il formato).
+    Ricorda di mettere l'immagine nell'apposita cartella %%images%% perchè funzioni</label>
+<input type="text" id="recipeImage" maxlength="25"></input>
+
+
+<label for="recipeAlt" id="recipeAltLabel">Inserisci un testo alternativo da visualizzare nel caso in cui l'immagine
+    non sia disponibile</label>
+<input type="text" id="recipeAlt" maxlength="25"></input>
+
+<ifErrorrecipeingredientsPlaceholder />
+<p class = "rosso" id = "recipeIngredientsError">Gli ingredienti della ricetta non possono essere vuoti</p>
+<endIfPlaceholder />
+
+
+<label for="recipeIngredients" id="recipeIngredientsLabel">Inserisci gli ingredienti della ricetta.
+    Separare i diversi ingredienti andando a capo</label>
+<textarea rows="15" cols="90" id="recipeIngredients" class = "adminarea"></textarea>
+
+<ifErrorrecipemethodPlaceholder />
+<p class = "rosso" id = "recipeMethodError">Il procedimento per la realizzazione della ricetta non può essere vuoto</p>
+<endIfPlaceholder />
+
+<label for="recipeMethod" id="recipeMethodLabel">Inserisci il procedimento per preparare la ricetta.
+    Separare i diversi passi andando a capo</label>
+<textarea rows="15" cols="90" id="recipeMethod" class = "adminarea"></textarea>
+
+<label for="recipeHint" id="recipeHintLabel">Inserisci eventuali consigli per la preparazione.
+    Separare i diversi consigli andando a capo</label>
+<textarea rows="15" cols="90" id="recipeHint" class = "adminarea"></textarea>
+
+<ifErrorrecipepeoplePlaceholder />
+<p class = "rosso" id = "recipePeopleError">Il numero di persone non può essere vuoto</p>
+<endIfPlaceholder />
+
+
+<label for="recipePeople" id="recipePeopleLabel">Inserisci il numero di persone per cui sono le dosi della ricetta.
+    Ricorda di aggiungere la parola persone (o fette nel caso di un dolce) alla fine</label>
+<input type="text" id="recipePeople" maxlength="25"></input>
+
+<input type="button" value="Aggiungi ricetta" onclick="sendRecipe()"/>
+
+
+</div>
+
+<div id="revokeBan">
+<h2>Revoca ban</h2>
+
+<label for = "banned">Utente a cui revocare il ban: </label>
+
+<select id="banned" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<p id="errorUnbanMessage" class="rosso nascosto">
+    Il ban non è stato revocato a causa di un errore, si prega di riprovare.</p>
+
+<input id="revoke" type="button" value="Sbanna utente" onclick="unbanUser()"/>
+</div>
+
+<div id= "banUserFromForum">
+
+<h2>Banna utente dal %%Forum%%</h2>
+
+<label for = "notBanned">Utente da bannare: </label>
+
+<select id="notBanned" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<p id="errorBanMessage" class="rosso nascosto">
+    L'utente non è stato bannato a causa di un errore, si prega di riprovare.</p>
+
+<input id = "ban" type="button" value="Banna utente" onclick="banUser()"/>
+
+</div>
+
+<div id= "removeAccount">
+
+<h2>Rimuovi %%account%%</h2>
+
+<p>Quest'azione comporta l'eliminazione di tutti i %%post%%, %%like%% e di tutte le risposte dell'utente selezionato</p>
+
+<label for = "remove">Utente a cui rimuovere l'%%account%%: </label>
+
+<select id="remove" class = "select">
+    <option class= "nascosto"></option>
+</select>
+
+<input type="button" onclick="deleteAccount()" id="removingAccount" value = "Rimouvi account" />
+
+<p id="errorRemoveMessage" class="rosso nascosto">
+    L'utente non è stato eliminato a causa di un errore, si prega di riprovare.</p>
+
+</div>
